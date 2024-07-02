@@ -65,6 +65,7 @@ function git#push(branch="main")
   let remote=split(system("git remote -v"),"\t")[0]
   call system('git push '.remote.' '.a:branch)
   echo "To ".system("git remote get-url ".remote)
+  call git#upotsu()
 endfunction
 
 function git#upotsu()
